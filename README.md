@@ -39,7 +39,7 @@ module "app_secrets" {
   application_id = "/applications/<your-application-id>"
 }
 
-outpur "active_secret_key_id" {
+output "active_secret_key_id" {
   value = module.app_secrets.secrets_lifecycle[module.app_secrets.active_secret].key_id
 }
 
@@ -60,7 +60,7 @@ This module is licensed under the MIT License. See the LICENSE file for more det
 
 ## Authors
 
-This module is maintained by Marius Hennecke.
+This module is maintained by [Marius Hennecke](https://github.com/mhennecke).
 
 ## Contributing
 
