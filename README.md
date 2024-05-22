@@ -18,7 +18,7 @@ Assuming the default validity and overlap, the module's rotation logic is as
 follows:
 
 ```text
-Blue: |----------24-----------········18········|----------24-----------··················|--
+Blue: |----------24-----------········18········|----------24-----------········18········|--
 Green:···········21········-----------24----------|········18········-----------24----------|
 Overlap:                   ·3·                  ·3·                  ·3·
 ```
@@ -48,6 +48,11 @@ output "active_secret_value" {
   sensitive = true
 }
 ```
+
+## Tests
+
+Run `terraform test` to run the unit tests. Due to the nature of the module,
+`time_sleep` resources are used in the tests for verifying the different sercet rotation scenarios.
 
 ## License
 
