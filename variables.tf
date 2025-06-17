@@ -50,3 +50,10 @@ variable "jitter" {
   description = "Duration for compensating plan to apply time difference for determining *_after_start. Must be a valid 'timeadd()' duration."
   default     = "2m"
 }
+
+variable "provider" {
+  type        = string
+  description = "Optional provider alias for the Azure AD components."
+  default     = null
+}
+

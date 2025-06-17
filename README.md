@@ -49,6 +49,11 @@ output "active_secret_value" {
 }
 ```
 
+## Variables
+
+### `azuread_provider_alias`
+Optional provider alias for the `azuread` components. Defaults to `null`. If set, the module will use the specified alias for the `azuread` provider.
+
 ## Tests
 
 Run `terraform test` to run the unit tests. Due to the nature of the module,

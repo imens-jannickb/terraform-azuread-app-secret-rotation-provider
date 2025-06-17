@@ -1,5 +1,3 @@
-
-
 locals {
   # factor for months to hours
   M_to_h = 365 / 12 * 24
@@ -59,6 +57,7 @@ locals {
 }
 
 resource "azuread_application_password" "blue" {
+  provider      = var.provider != null ? azuread[var.provider] : azuread
   display_name   = "blue;not_before=${formatdate(var.date_format, local.blue_start_date)}"
   application_id = var.application_id
 
@@ -71,6 +70,7 @@ resource "azuread_application_password" "blue" {
 }
 
 resource "azuread_application_password" "green" {
+  provider      = var.provider != null ? azuread[var.provider] : azuread
   display_name   = "green;not_before=${formatdate(var.date_format, local.green_start_date)}"
   application_id = var.application_id
 
