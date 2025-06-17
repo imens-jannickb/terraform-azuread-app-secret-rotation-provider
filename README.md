@@ -51,7 +51,7 @@ output "active_secret_value" {
 
 ## Variables
 
-### `azuread_provider_alias`
+### `provider`
 Optional provider alias for the `azuread` components. Defaults to `null`. If set, the module will use the specified alias for the `azuread` provider.
 
 ## Tests
